@@ -10,13 +10,19 @@ window.onload = function() {
   let pronoun = ["the", "our"];
   let adj = ["great", "big"];
   let noun = ["jogger", "racoon"];
+  let point = [".com", ".net"];
 
+
+  let domainName = ''
   for (let i = 0; i < pronoun.length; i++) {
     for (let j = 0; j < adj.length; j++) {
-      for (let k = 0; k < noun.length; k++) {}
+      for (let k = 0; k < noun.length; k++) {
+        for (let l = 0; l < point.length; l++)
+        domainName += " " + pronoun[i] + adj[j] + noun[k] + point[l];
+      }
     }
   }
 
-  let domainName = document.querySelector("#GetResutls");
-  domainName.innerHTML = console.log("Hello Rigo from the console!");
+  console.log(document.querySelector('#GetResults').innerHTML) 
+  document.querySelector('#GetResults').innerHTML = domainName
 };
