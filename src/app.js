@@ -8,21 +8,22 @@ import "./assets/img/4geeks.ico";
 window.onload = function() {
   //write your code here
   let pronoun = ["the", "our"];
-  let adj = ["great", "big"];
+  let adjective = ["great", "big"];
   let noun = ["jogger", "racoon"];
-  let point = [".com", ".net"];
+  let extension = [".com", ".net"];
 
 
-  let domainName = ''
+  let domainsName = ''
   for (let i = 0; i < pronoun.length; i++) {
-    for (let j = 0; j < adj.length; j++) {
+    for (let j = 0; j < adjective.length; j++) {
       for (let k = 0; k < noun.length; k++) {
-        for (let l = 0; l < point.length; l++)
-        domainName += " " + pronoun[i] + adj[j] + noun[k] + point[l];
-      }
+        for (let l = 0; l < extension.length; l++)
+        domainsName += `<li>${pronoun[i]}${adjective[j]}${noun[k]}${extension[l]}</li>`;
+      } 
     }
   }
 
-  console.log(document.querySelector('#GetResults').innerHTML) 
-  document.querySelector('#GetResults').innerHTML = domainName
+  console.log(document.querySelector('#get-results').innerHTML) 
+  document.querySelector('#get-results').innerHTML = domainsName
 };
+
